@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import 'assets/styles/normalize.scss';
+import './index.scss';
+import Menu from './pages/Menu';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <div>
-      <h1>Aluroni</h1>
-    </div>
+    <Menu />
   </React.StrictMode>
 );
