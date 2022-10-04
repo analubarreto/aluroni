@@ -10,7 +10,7 @@ interface Props {
 export default function SearchInput({ search, setSearch }: Props) {
   return (
     <div className={styles.searchWrapper}>
-      <input type="text" value={search} onChange={e => setSearch(e.target.value)} />
+      <input type="text" value={search} onChange={e => setSearch(e.target.value)} placeholder="Search in our menu" />
       <CgSearch size={20} color="#4C4D5E" />
     </div>
   )
