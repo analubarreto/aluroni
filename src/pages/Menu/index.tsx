@@ -4,12 +4,13 @@ import SearchInput from 'pages/Menu/SearchInput';
 import { useState } from 'react';
 import Filters from './Filters';
 import SortSelect from './SortSelect';
+import Items from './Items';
 
 export default function Menu() {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState<number | null>(null);
   const [sort, setSort] = useState('');
-
+  
   return (
     <main>
       <nav className={styles.navigation}>
@@ -27,6 +28,7 @@ export default function Menu() {
           <Filters filter={filter} setFilter={setFilter} />
           <SortSelect sort={sort} setSort={setSort} />
         </div>
+        <Items search={search} filter={filter} sort={sort} />
       </section>
     </main>
   );
